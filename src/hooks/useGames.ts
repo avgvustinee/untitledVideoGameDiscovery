@@ -1,12 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
 import { GameQuery } from "../App";
 import apiClient, { FetchResponse } from '../services/apiClient';
+import { Platform } from './usePlatforms';
 
-export interface Platform {
-    id: number;
-    name: string;
-    slug: string;
-}
+
 export interface Game {
     id: number;
     name: string;
@@ -35,7 +32,7 @@ const useGames = (gameQuery: GameQuery) =>
                 })
                 .then(res => res.data),
         staleTime: 24 * 60 * 60 * 1000,
-        
+
 
     })
 

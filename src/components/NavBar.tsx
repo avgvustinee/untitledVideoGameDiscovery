@@ -3,14 +3,12 @@ import logo from "../assets/rawgg.png";
 import ColorModeSwitch from "./ColorModeSwitch";
 import SearchInput from "./SearchInput";
 
-interface Props {
-  onSearch: (searchText: string) => void;
-}
-const NavBar = ({ onSearch }: Props) => {
+
+const NavBar = () => {
   return (
     <HStack padding="10px">
       <Image borderRadius={20}  src={logo} boxSize="60px" />
-      <SearchInput onSearch={onSearch} />
+      <SearchInput  />
       <ColorModeSwitch />
     </HStack>
   );

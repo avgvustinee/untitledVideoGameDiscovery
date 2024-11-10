@@ -4,15 +4,19 @@ import ColorModeSwitch from "./ColorModeSwitch";
 import SearchInput from "./SearchInput";
 import { Link } from "react-router-dom";
 
-
 const NavBar = () => {
   return (
     <HStack padding="10px">
-      <Link to='/'>
-      <Image borderRadius={20}  src={logo} boxSize="60px" objectFit='cover'/>
+      <Link to="/">
+        <Image
+          borderRadius={10}
+          src={logo}
+          boxSize="60px"
+          objectFit='fill'
+        />
       </Link>
-  
-      <SearchInput  />
+
+      <SearchInput />
       <ColorModeSwitch />
     </HStack>
   );

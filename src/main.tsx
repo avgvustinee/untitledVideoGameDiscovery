@@ -15,7 +15,13 @@ createRoot(document.getElementById("root")!).render(
     <ChakraProvider theme={theme}>
       <ColorModeScript initialColorMode={theme.config.initialColorMode} />
       <QueryClientProvider client={queryClient}>
-        <RouterProvider router={router} />
+        <RouterProvider
+          router={router}
+          future={{
+            v7_startTransition: true,
+            // Enable the relative splat path flag
+          }}
+        />
         <ReactQueryDevtools />
       </QueryClientProvider>
     </ChakraProvider>
